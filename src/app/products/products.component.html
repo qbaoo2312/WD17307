@@ -1,0 +1,21 @@
+<a routerLink="/products-create">Create New</a>
+<div class="container">
+    <div class="row">
+        <div class="col-1">STT</div>
+        <div class="col-3">Name</div>
+        <div class="col-3">Price</div>
+        <div class="col-3">Desc</div>
+        <div class="col-2">Service</div>
+    </div>
+    <div class="row" *ngFor="let product of products; index as id">
+        <div class="col-1">{{id + 1}}</div>
+        <div class="col-3">{{product.name}}</div>
+        <div class="col-3">{{product.price}}</div>
+        <div class="col-3">{{product.desc}}</div>
+        <div class="col-2">
+            <button>View Detail</button>
+            <button>Update</button>
+            <button (click)="delete(product.id!)">Delete</button>
+        </div>
+    </div>
+</div>

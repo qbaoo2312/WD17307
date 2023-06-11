@@ -1,0 +1,11 @@
+<div class="container">
+    <form id="form" [formGroup]="productForm" (ngSubmit)="onHandleSubmit()">
+        <label for="name">Ten san pham: </label>
+        <input type="text" formControlName="name" />
+        <label for="price">Gia san pham: </label>
+        <input type="number" formControlName="price" />
+        <label for="desc">Mo ta san pham: </label>
+        <input type="text" formControlName="desc" />
+        <button type="submit" [disabled]="!productForm.valid">Them</button>
+    </form> 
+</div>
